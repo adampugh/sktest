@@ -1,0 +1,22 @@
+.search__hero {
+    background: $sk-blue;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.search__hero__logo {
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+.search__hero__input {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
