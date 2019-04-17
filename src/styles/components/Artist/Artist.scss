@@ -1,0 +1,21 @@
+.artist {
+    padding-bottom: 40px;
+}
+
+.artist__wrapper {
+    padding: 40px 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img {
+        max-width: 100%;
+    }
+}
+
+.artist__text {
+    padding: 0 20px;
+}
+
+.artist__btn {
+    text-align: center;
+}

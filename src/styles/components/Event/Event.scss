@@ -1,0 +1,42 @@
+.event__hero {
+    padding: 40px 0;
+    img {
+        height: 200px;
+    }
+}
+
+.event__hero__info__text {
+    text-align: left;
+    display: block;
+    margin: 10px 0;
+    p {
+        display: inline;
+        margin-left: 10px;
+    }
+}
+
+.event__hero__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 20px;
+    border-bottom: 2px solid lightgrey;
+}
+
+.event__desc {
+    padding-bottom: 20px;
+    border-bottom: 2px solid lightgrey;
+}
+
+.event__artists {
+    padding: 20px 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .event__hero__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .event__hero__img {
+        justify-self: end;
+    }
+}

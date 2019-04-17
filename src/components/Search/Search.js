@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import skiddle from '../../apis/skiddle';
 
 import Logo from '../../assets/logo.png';
-
+import SearchEvent from './SearchEvent';
 
 class Search extends Component {
     state = {
-        keyword: ''
+        keyword: '',
+        events: []
     }
 
     handleInput = (e) => {
@@ -24,31 +25,19 @@ class Search extends Component {
     onSubmit = () => {
         const { keyword } = this.state;
 
-        skiddle.get(`/events/search/?api_key=${process.env.REACT_APP_API_KEY}&keyword=${keyword}`, 
-        {
-            method: 'GET',
-      mode: 'no-cors',
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-      },
-      withCredentials: true,
-      credentials: 'same-origin',
-        }
-        
-        )
+        skiddle.get(`/events/search/?api_key=${process.env.REACT_APP_API_KEY}&keyword=${keyword}`)
             .then(response => {
-                console.log(response.data);
+                this.setState({
+                    events: response.data.results
+                });
             }).catch(error => {
-
+                console.log(error);
             });
     }
 
 
-
-
     render() {
-        const { keyword } = this.state;
+        const { keyword, events } = this.state;
 
         return (
             <div className="search">
@@ -62,6 +51,20 @@ class Search extends Component {
                             onChange={this.handleInput}
                             onKeyPress={this.handleEnter}  
                         />
+                    </div>
+                </div>
+                <div className="search__events">
+                    <div className="search__events__grid container">
+                    {
+                        events.map(({ id, eventname, date, description, largeimageurl, venue}) => <SearchEvent 
+                            key={id} 
+                            id={id}
+                            name={eventname} 
+                            date={date} 
+                            desc={description} 
+                            img={largeimageurl} 
+                            venue={venue.name} />)
+                    }
                     </div>
                 </div>
             </div>

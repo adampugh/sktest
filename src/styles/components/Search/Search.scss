@@ -6,6 +6,7 @@
 
 .search__hero__logo {
     max-width: 500px;
+    width: 100%;
     margin: 0 auto;
     display: block;
 }
@@ -19,4 +20,23 @@
     max-width: 500px;
     padding: 20px;
     text-align: center;
+}
+
+.search__events {
+    background: $sk-grey;
+    height: 100%;
+    padding: 40px 0;
+}
+
+.search__events__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+
+@media (min-width: $desktop-breakpoint) {
+    .search__events__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

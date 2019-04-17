@@ -1,0 +1,14 @@
+.eventArtist {
+    display: flex;
+    align-content: center;
+    padding: 20px 0;
+    border-bottom: 2px solid lightgrey;
+    img {
+        height: 100px;
+        margin-right: 10px;
+    }
+}
+
+.eventArtist__text {
+    align-self: center;
+}

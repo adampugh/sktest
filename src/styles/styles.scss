@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@import "./base/mixins.scss";
 @import "./base/settings.scss";
 
 @import "./components/Search/Search.scss";
+@import "./components/Search/SearchEvent.scss";
+
+@import "./components/Event/Event.scss";
+@import "./components/Event/EventArtist.scss";
+
+@import "./components/Artist/Artist.scss";
+
+@import "./components/UI/Navbar.scss";
+@import "./components/UI/Loader.scss";

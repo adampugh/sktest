@@ -1,0 +1,40 @@
+.searchEvent {
+    background: white;
+    text-align: center;
+    max-width: 100%;
+    @include boxshadow;
+    h2 {
+        color: #121212;
+        margin-bottom: 10px;
+    }
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+}
+
+.searchEvent__text__date, .searchEvent__text__venue {
+    text-align: left;
+    display: block;
+    margin: 10px 0;
+    p {
+        display: inline;
+        margin-left: 10px;
+    }
+}
+
+.searchEvent__text__desc {
+    height: 100px;
+}
+
+.searchEvent__text {
+    padding: 20px;
+    button {
+        margin-top: 10px;
+        &:hover {
+            @include boxshadow;
+            cursor: pointer;
+        }
+    }
+}

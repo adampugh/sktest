@@ -52,6 +52,29 @@ $sk-grey-dark: #757575;
 // breakpoints
 $desktop-breakpoint: 62rem;
 
+// defaults
+body, html {
+	font-family: 'Heebo', sans-serif;
+	color: $sk-grey-dark;
+	background: $sk-grey;
+}
+
+.title {
+	font-family: 'Raleway', sans-serif;
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.btn {
+	padding: 10px 20px;
+	background: $sk-blue;
+	color: white;
+	border: none;
+	&:hover {
+		cursor: pointer;
+		@include boxshadow;
+	}
+}
 
 // containers
 .container {
